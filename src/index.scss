@@ -1,0 +1,44 @@
+@import "./styles/libs/reset"; /* RESET OR */
+@import "./styles/libs/normalize"; /* OR NORMALIZE */
+
+@import "./styles/mixins/adaptive-property";
+@import "./styles/fonts";
+@import "./styles/variables";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 1400px;
+  font-family: "Roboto";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

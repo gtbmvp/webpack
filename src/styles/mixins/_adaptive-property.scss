@@ -1,0 +1,11 @@
+@mixin adaptive($property, $layoutValue, $minValue, $container) {
+  $delta: $layoutValue - $minValue;
+
+  #{$property}: #{$layoutValue}px;
+
+  @media (max-width: #{$container}px) {
+    #{$property}: calc(
+      #{$minValue}px + #{$delta} * ((100vw - 320px) / (#{$container} - 320))
+    );
+  }
+}
